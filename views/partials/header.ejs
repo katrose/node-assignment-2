@@ -12,12 +12,9 @@
   <header>
     <nav>
       <ul>
-        <li><i class="fas fa-book-open fa-2x"></i></li>
-        <li><%= typeof navBar %></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="blog">Blog</a></li>
-        <li><a href="gallery">Photos</a></li>
-        <li><a href="contact">Contact</a></li>
+        <% navBar.forEach(function (item) { %>
+          <li><a href="<%= item.link %>"><%= item.title %></a></li>
+        <% }) %>
       </ul>
     </nav>
   </header>

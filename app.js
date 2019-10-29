@@ -12,14 +12,14 @@ app.set('view engine', 'ejs'); // Allows us to exclude the file extension
 
 // Endpoints for each view
 app.get('/', function(request, response) {
-  response.render('index', navBar);
+  response.render('index', {navBar: navBar});
 });
 
 app.get('/:page', function(request, response) {
-  response.render(request.params.page, navBar); // params.page = :page
+  response.render(request.params.page, {navBar: navBar}); // params.page = :page
 });
 
-// express.static (middleware): Serve static assets. Will "automatically" serve all types of files (css, images) as long as they are in the public directory.
+// Serve static assets. Will serve all types of files (css, images) as long as they are in the public directory.
 app.use(express.static(path.join(__dirname, 'assets')));
 
 // Environment port (undefined) || 3000 as default
