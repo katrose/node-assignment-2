@@ -1,6 +1,7 @@
 @import url('reset.css');
 @import url('fonts.css');
 
+/* ========================== */
 /*  Global                    */
 /* ========================== */
 
@@ -13,6 +14,7 @@ h1, h2, h3, h4, h5, h6, nav, .contact, footer p {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* ========================== */
 /* Nav Bar                    */
 /* ========================== */
 header {
@@ -56,6 +58,7 @@ nav .fa-book-open {
   bottom: 5px;
 }
 
+/* ========================== */
 /*  Hero Section              */
 /* ========================== */
 
@@ -96,6 +99,7 @@ nav .fa-book-open {
 }
 
 
+/* ========================== */
 /* Blog Cards                 */
 /* ========================== */
 
@@ -181,6 +185,7 @@ nav .fa-book-open {
   max-height: 150px;
 }
 
+/* ========================== */
 /* Blog Post                  */
 /* ========================== */
 
@@ -292,6 +297,7 @@ blockquote q::before {
   top: 0;
 }
 
+/* ========================== */
 /* Gallery                    */
 /* ========================== */
 
@@ -328,6 +334,7 @@ blockquote q::before {
   transition: all .25s ease;
 }
 
+/* ========================== */
 /* Contact Page               */
 /* ========================== */
 
@@ -350,9 +357,20 @@ blockquote q::before {
 }
 
 /* Form Styling */
-.contact form {
+.contact form fieldset {
   display: flex;
   flex-direction: column;
+}
+
+.contact form legend {
+  padding: 1.1em;
+  margin-bottom: 1.1em;
+
+  border: 1px solid black;
+  border-radius: 15px;
+
+  background-color: rgb(17, 17, 17);
+  color: white;
 }
 
 .contact label {
@@ -410,6 +428,7 @@ blockquote q::before {
   border-radius: 20px;
 }
 
+/* ========================== */
 /* Footer                     */
 /* ========================== */
 footer {
@@ -436,6 +455,7 @@ footer p {
   margin: .5em 0 0 0;
 }
 
+/* ========================== */
 /* MEDIA QUERIES              */
 /* ========================== */
 @media (max-width: 1545px) {
@@ -475,6 +495,7 @@ footer p {
     font-size: 2em;
   }
 
+  /* --------------- */
   /*  Blog Post Grid */
   /* --------------- */
   .blog {
@@ -516,6 +537,7 @@ footer p {
     max-height: 250px;
   }
 
+  /* ----------- */
   /*  Blog Post  */
   /* ----------- */
   .blog-post {
@@ -537,6 +559,7 @@ footer p {
     float: none;
   }
 
+  /* -------------- */
   /*  Contact Page  */
   /* -------------- */
   .contact {
