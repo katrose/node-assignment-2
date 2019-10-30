@@ -348,6 +348,7 @@ blockquote q::before {
   padding-bottom: 1em;
   font-size: 2.6em;
 }
+
 .contact a {
   padding: .2em;
 
@@ -358,6 +359,8 @@ blockquote q::before {
 
 /* Form Styling */
 .contact form fieldset {
+  margin-bottom: 2em;
+
   display: flex;
   flex-direction: column;
 }
@@ -393,6 +396,8 @@ blockquote q::before {
 .contact input[type="text"], textarea {
   padding: .5em;
 
+  width: 100%;
+
   background-color: rgba(173, 215, 229, 0.5);
 
   font-size: 1.1em;
@@ -426,6 +431,26 @@ blockquote q::before {
 
   border: 1px solid white;
   border-radius: 20px;
+}
+
+/* ========================== */
+/* Thank You Page             */
+/* ========================== */
+
+.thank-you {
+  margin: auto;
+  width: 50vw;
+}
+
+.thank-you h1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  font-size: 2.6em;
+}
+
+.thank-you ul {
+  list-style-type: none;
 }
 
 /* ========================== */

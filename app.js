@@ -10,6 +10,9 @@ const app = express();
 
 app.set('view engine', 'ejs'); // Allows us to exclude the file extension
 
+// Read HTTP POST data
+app.use(express.urlencoded({ extended: false }))
+
 // Endpoints for each view
 app.get('/', function(request, response) {
   response.render('index', {navBar: navBar});
@@ -19,8 +22,20 @@ app.get('/:page', function(request, response) {
   response.render(request.params.page, {navBar: navBar}); // params.page = :page
 });
 
+// POST Request
+// Note: Have to make sure form input tags have name attributes
+app.post('/submitform', function(request, response){
+  response.render('thankyou', {data: request.body, navBar: navBar});
+})
+
 // Serve static assets. Will serve all types of files (css, images) as long as they are in the public directory.
 app.use(express.static(path.join(__dirname, 'assets')));
+
+// Handle 404s
+app.use(function(req, res, next) {
+  res.status(404);
+  res.send('404: File Not Found');
+});
 
 // Environment port (undefined) || 3000 as default
 const PORT = process.env.PORT || 3000;
