@@ -1,10 +1,10 @@
 // --------------------------------------------------------
 // STATIC HTML SERVER
 // --------------------------------------------------------
-
 const express = require('express');
 const path = require('path');
 const navBar = require('./navBar')
+const fs = require('fs');
 
 const app = express();
 
@@ -22,9 +22,20 @@ app.get('/:page', function(request, response) {
   response.render(request.params.page, {navBar: navBar}); // params.page = :page
 });
 
+// Middleware function to log all submitted form data
+function logForm(request, response, next) {
+
+  fs.appendFile('logs/forms.txt', JSON.stringify(request.body) + "\n", function(err) {
+    if (err) {
+      console.log(err)
+    }
+  });
+  next();
+}
+
 // POST Request
 // Note: Have to make sure form input tags have name attributes
-app.post('/submitform', function(request, response){
+app.post('/submitform', logForm, function(request, response){
   response.render('thankyou', {data: request.body, navBar: navBar});
 })
 
