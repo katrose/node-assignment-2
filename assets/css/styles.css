@@ -454,6 +454,22 @@ blockquote q::before {
 }
 
 /* ========================== */
+/* 404                        */
+/* ========================== */
+
+.file-not-found {
+  margin: auto;
+  width: 50vw;
+}
+
+.file-not-found h1 {
+  padding-top: 1em;
+  padding-bottom: .5em;
+
+  font-size: 4em;
+}
+
+/* ========================== */
 /* Footer                     */
 /* ========================== */
 footer {
