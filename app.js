@@ -3,8 +3,8 @@
 // --------------------------------------------------------
 const express = require('express');
 const path = require('path');
-const navBar = require('./navBar')
-const fs = require('fs');
+const navBar = require('./navBar');
+const logForm = require('./logform');
 
 const app = express();
 
@@ -23,15 +23,15 @@ app.get('/:page', function(request, response) {
 });
 
 // Middleware function to log all submitted form data
-function logForm(request, response, next) {
+// function logForm(request, response, next) {
 
-  fs.appendFile('logs/forms.txt', JSON.stringify(request.body) + "\n", function(err) {
-    if (err) {
-      console.log(err)
-    }
-  });
-  next();
-}
+//   fs.appendFile('logs/forms.log', JSON.stringify(request.body) + "\n", function(err) {
+//     if (err) {
+//       console.log(err)
+//     }
+//   });
+//   next();
+// }
 
 // POST Request
 // Note: Have to make sure form input tags have name attributes
