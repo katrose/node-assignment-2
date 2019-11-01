@@ -1,6 +1,6 @@
 # Node Assignment #2 - Express Website with Contact Form
 
-For this assignment, I used my final project/portfolio from CPNT 262.
+For this assignment, I used my final project/portfolio from CPNT 260.
 
 ## Notes:
 
