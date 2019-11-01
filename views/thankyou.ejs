@@ -7,6 +7,15 @@
   <ul>
     <li>Name: <%= data.name %></li>
     <li>Email: <%= data.email %></li>
+
+    <!-- If data was submitted from contact.ejs, print out message if it exists -->
+    <% if (data.message !== undefined) { %>
+    <%   if (data.message.length < 1) { %>
+          <li>Message: N/A</li>
+    <%   } else { %>
+          <li>Message: <%= data.message %></li>
+    <%   } %>
+    <% } %>
   </ul>
 
 </main>

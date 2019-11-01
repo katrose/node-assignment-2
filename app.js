@@ -48,8 +48,11 @@ app.post('/submitform', function(request, response){
 /**
  * 404 HANDLER
  */
+
+ // This will catch non-404 errors as well
 app.use(function(err, request, response, next) {
   if (err) {
+    // console.log(err)
     response.status(404);
     response.render('filenotfound', {navBar: navBar});
   }
