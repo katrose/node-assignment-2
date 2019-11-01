@@ -19,11 +19,11 @@ header {
 }
 
 main {
-  min-height: 80vh;
+  min-height: 75vh;
 }
 
 footer {
-  height: 10vh;
+  height: 15vh;
 }
 
 h1, h2, h3, h4, h5, h6 {

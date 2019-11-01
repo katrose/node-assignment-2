@@ -1,11 +1,35 @@
 <footer>
-  <div id="social-media">
-    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
-    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
-    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-    <a href="https://www.instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+
+  <div class="footer-main">
+    <div id="social-media">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="https://www.instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
+    <p>Katherine Picazo &copy; 2019</p>
   </div>
-  <p>Katherine Picazo &copy; 2019</p>
+  
+  <div class="footer-form">
+    <form action="/submitform" method="post">
+
+      <fieldset>
+        <legend>Sign up for my newsletter!</legend>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+
+      </fieldset>
+
+    </form>
+
+  </div>
 </footer>
 </body>
 </html>

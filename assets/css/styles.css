@@ -10,7 +10,7 @@ body {
   font-family: 'Lora', serif;
 }
 
-h1, h2, h3, h4, h5, h6, nav, .contact, footer p {
+h1, h2, h3, h4, h5, h6, nav, .contact, footer p, footer legend {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -381,7 +381,7 @@ blockquote q::before {
   margin-bottom: .3em;
 }
 
-.contact input:focus, textarea:focus {
+input:focus, textarea:focus {
   outline: 0;
 }
 
@@ -410,7 +410,7 @@ blockquote q::before {
   display: flex;
 }
 
-.contact input[type="submit"]:hover,  .contact input[type="reset"]:hover{
+.contact input[type="submit"]:hover, .contact input[type="reset"]:hover{
   cursor: pointer;
   
   background-color: rgba(173, 215, 229, 1);
@@ -420,7 +420,7 @@ blockquote q::before {
   margin-right: 1em;
 }
 
-.contact input[type="submit"], input[type="reset"] {
+.contact input[type="submit"], .contact input[type="reset"] {
   padding: .5em 1em;
 
   background-color: rgb(173, 215, 229, 0.5);
@@ -473,14 +473,12 @@ blockquote q::before {
 /* Footer                     */
 /* ========================== */
 footer {
+
   background-color: rgb(17, 17, 17);
   color: white;
 
-  text-align: center;
-
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -494,6 +492,29 @@ footer a {
 
 footer p {
   margin: .5em 0 0 0;
+}
+
+footer .footer-form {
+  display: flex;
+}
+
+.footer-form input[type="submit"]:hover, .footer-form input[type="reset"]:hover{
+  cursor: pointer;
+  
+  background-color: black;
+  color: white;
+}
+
+.footer-form input[type="submit"], .footer-form input[type="reset"] {
+
+  background-color: white;
+  color: black;
+
+  font-family: inherit;
+  font-weight: bold;
+
+  border: 2px solid white;
+  border-radius: 15px;
 }
 
 /* ========================== */
